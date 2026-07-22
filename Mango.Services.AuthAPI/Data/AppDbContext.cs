@@ -16,6 +16,14 @@ namespace Mango.Services.AuthAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ApplicationUser>().ToTable( // ChatGPT-20260722WED-01.pdf
+                tb =>
+                {
+                    //tb.HasTrigger("TG_AspNetUsers");
+                    tb.HasTrigger("xxx"); // ABDP | 20260722WED | TIDAK BOLEH STRING KOSONG, HANYA MEMBERITAHU ENTITY FRAMEWORK BAHWA DI DATABASE INI ADA TRIGGER
+                }
+            );
         }
     }
 }
