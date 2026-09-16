@@ -55,10 +55,10 @@ flowchart TB
     subgraph DBs ["Database Layer"]
         direction LR
         AuthDB[("Auth DB<br/><br/><br/>")]
+        OrderDB[("Order DB<br/><br/><br/>")]
+        CartDB[("Cart DB<br/><br/><br/>")]
         CouponDB[("Coupon DB<br/><br/><br/>")]
         ProductDB[("Product DB<br/><br/><br/>")]
-        CartDB[("Cart DB<br/><br/><br/>")]
-        OrderDB[("Order DB<br/><br/><br/>")]
     end
 
     Auth ---|"● 💾 Save"| AuthDB
